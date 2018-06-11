@@ -118,7 +118,7 @@ public class DemoFragment extends Fragment {
                     default:
                         Toast.makeText(getContext(), "You clicked an unconnected list item",Toast.LENGTH_SHORT).show();
                 }
-                
+
             }
         });
 
