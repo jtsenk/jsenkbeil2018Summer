@@ -1,14 +1,21 @@
 package com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.fragment;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.MainActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
 
 import java.util.ArrayList;
@@ -24,6 +31,7 @@ public class DemoFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private final ArrayList<String> contentList;
+    private final Context context;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -32,8 +40,11 @@ public class DemoFragment extends Fragment {
 
 
     public DemoFragment() {
+
+        context = getContext();
+        
         contentList = new ArrayList<String>();
-        contentList.add("Alpha");
+        contentList.add("LaunchMode");
         contentList.add("Beta");
         contentList.add("Gamma");
         contentList.add("Delta");
@@ -85,6 +96,31 @@ public class DemoFragment extends Fragment {
         listView = (ListView)view.findViewById(R.id.fragment_demo_lv);
         ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
         listView.setAdapter(adapter);
+        //View headerView = new View(getActivity());
+        //listView.addHeaderView(headerView);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        //go to LaunchModeActivity
+                        Intent intent = new Intent(getActivity(), LaunchModeActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+
+                    case 2:
+
+                    case 3:
+
+                    case 4:
+
+                    default:
+                        Toast.makeText(getContext(), "You clicked an unconnected list item",Toast.LENGTH_SHORT).show();
+                }
+                
+            }
+        });
 
         return view;
     }

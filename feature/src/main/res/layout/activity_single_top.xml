@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SingleTopActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="SingleTopActivity"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/singleTop_standard_bt"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="Standard"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/singleTop_singletop_bt"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="SingleTop"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/singleTop_singletask_bt"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="SingleTask"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="10sp"/>
+
+
+        <Button
+            android:id="@+id/singleTop_singleinstance_bt"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="SingleInstance"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="9sp"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
