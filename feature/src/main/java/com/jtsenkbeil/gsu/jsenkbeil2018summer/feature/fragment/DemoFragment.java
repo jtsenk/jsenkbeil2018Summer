@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
 
 import java.util.ArrayList;
 
@@ -82,8 +83,10 @@ public class DemoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_demo, container,false);
         listView = (ListView)view.findViewById(R.id.fragment_demo_lv);
+        ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
+        listView.setAdapter(adapter);
 
-        return inflater.inflate(R.layout.fragment_demo, container, false);
+        return view;
     }
 
 }

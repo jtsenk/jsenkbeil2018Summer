@@ -1,22 +1,32 @@
 package com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+
+import java.util.ArrayList;
+
 public class ListNormalAdapter extends BaseAdapter {
 
     private final Context context;
+    private final LayoutInflater inflater;
+    private final ArrayList<String> list;
 
-    public ListNormalAdapter(Context context) {
+    public ListNormalAdapter(Context context, ArrayList<String> list) {
         this.context = context;
+        this.list = list;
+        inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return 15;
+        return list.size();
     }
 
     @Override
@@ -31,10 +41,10 @@ public class ListNormalAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-        TextView tv = new TextView(context);
-        tv.setText("");
-        return null;
+        convertView = inflater.inflate(R.layout.list_normal_item, parent, false);
+        TextView tv = (TextView)convertView.findViewById(R.id.item_normal_tv);
+        tv.setText(list.get(position));
+        return tv;
     }
 
 }
