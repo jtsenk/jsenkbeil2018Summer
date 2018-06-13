@@ -14,8 +14,10 @@ import android.widget.Toast;
 
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.MainActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.IntentAndBundleActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NinePatchActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NotificationActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ScaleTypeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
@@ -51,8 +53,8 @@ public class DemoFragment extends Fragment {
         contentList.add("ViewPager");
         contentList.add("ImageScaleType");
         contentList.add("9Patch");
-        contentList.add("Epsilon");
-        contentList.add("Zeta");
+        contentList.add("Intent & Bundle");
+        contentList.add("Notification");
         contentList.add("Eta");
         contentList.add("Theta");
         contentList.add("Iota");
@@ -116,13 +118,29 @@ public class DemoFragment extends Fragment {
                         startActivity(intent);
                         break;
                     case 2:
-                        //go to NinePatchActivity
+                        //go to ScaleTypeActivity (scale type pager)
                         intent = new Intent(getActivity(), ScaleTypeActivity.class);
                         startActivity(intent);
                         break;
                     case 3:
-                        //go to NinePatchActivity
+                        //go to NinePatchActivity (display a 9Patch file and original)
                         intent = new Intent(getActivity(), NinePatchActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        //go to IntentAndBundleActivity
+                        intent = new Intent(getActivity(), IntentAndBundleActivity.class);
+                        intent.putExtra("Msg","Hello");
+                        intent.putExtra("number",10);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("B_Msg",100);
+                        bundle.putString("B_Msg","FromBundle");
+                        intent.putExtra("B_Msg",bundle);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        //go to NotificationActivity
+                        intent = new Intent(getActivity(), NotificationActivity.class);
                         startActivity(intent);
                         break;
                     default:
