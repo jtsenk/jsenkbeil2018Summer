@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.MainActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NinePatchActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ScaleTypeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
 
@@ -37,17 +39,18 @@ public class DemoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private ListView listView;
-
+    private Intent intent;
 
     public DemoFragment() {
 
         context = getContext();
-        
+        intent = null;
+
         contentList = new ArrayList<String>();
         contentList.add("LaunchMode");
-        contentList.add("Beta");
-        contentList.add("Gamma");
-        contentList.add("Delta");
+        contentList.add("ViewPager");
+        contentList.add("ImageScaleType");
+        contentList.add("9Patch");
         contentList.add("Epsilon");
         contentList.add("Zeta");
         contentList.add("Eta");
@@ -104,17 +107,24 @@ public class DemoFragment extends Fragment {
                 switch (position) {
                     case 0:
                         //go to LaunchModeActivity
-                        Intent intent = new Intent(getActivity(), LaunchModeActivity.class);
+                        intent = new Intent(getActivity(), LaunchModeActivity.class);
                         startActivity(intent);
                         break;
                     case 1:
-
+                        //go to ViewPagerActivity
+                        intent = new Intent(getActivity(), ViewPagerActivity.class);
+                        startActivity(intent);
+                        break;
                     case 2:
-
+                        //go to NinePatchActivity
+                        intent = new Intent(getActivity(), ScaleTypeActivity.class);
+                        startActivity(intent);
+                        break;
                     case 3:
-
-                    case 4:
-
+                        //go to NinePatchActivity
+                        intent = new Intent(getActivity(), NinePatchActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         Toast.makeText(getContext(), "You clicked an unconnected list item",Toast.LENGTH_SHORT).show();
                 }
