@@ -12,8 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.MainActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceListViewActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.IntentAndBundleActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NinePatchActivity;
@@ -55,7 +55,7 @@ public class DemoFragment extends Fragment {
         contentList.add("9Patch");
         contentList.add("Intent & Bundle");
         contentList.add("Notification");
-        contentList.add("Eta");
+        contentList.add("AdvancedListView");
         contentList.add("Theta");
         contentList.add("Iota");
         contentList.add("Kappa");
@@ -141,6 +141,11 @@ public class DemoFragment extends Fragment {
                     case 5:
                         //go to NotificationActivity
                         intent = new Intent(getActivity(), NotificationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        //go to Advanced List View
+                        intent = new Intent(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent);
                         break;
                     default:
