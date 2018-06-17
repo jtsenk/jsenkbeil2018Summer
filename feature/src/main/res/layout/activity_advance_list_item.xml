@@ -30,4 +30,14 @@
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/activity_advance_list_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:text="Test Text!"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textColor="@android:color/white"/>
+
+
 </RelativeLayout>

@@ -25,7 +25,8 @@ public class AdvanceListViewActivity extends AppCompatActivity {
         ArrayList<String> list = new ArrayList<>();
         list.add("Hello!");
         list.add("Hi, how are you?");
-        list.add("I am fine, thanks!");
+        list.add("I am fine, thanks!  How you doin'?");
+        list.add("I'm doing well!  The weather is awesome.");
         for(int i=0; i<10; i++) {
             list.add("That's so great!");
         }

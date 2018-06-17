@@ -1,6 +1,7 @@
 package com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter;
 
 import android.content.Context;
+import android.util.LayoutDirection;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.util.UtilDensity;
 
 import java.util.ArrayList;
 
@@ -50,19 +52,31 @@ public class AdvanceListViewAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.rl_odd = (RelativeLayout) convertView.findViewById(R.id.odd);
             viewHolder.rl_even = (RelativeLayout) convertView.findViewById(R.id.even);
+            viewHolder.tv = (TextView) convertView.findViewById(R.id.activity_advance_list_item_tv);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder)convertView.getTag();
         }
-
+        viewHolder.tv.setText(list.get(position));
+        viewHolder.lp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
         if (position % 2 != 0) {
             //position is odd
+            //message received
             viewHolder.rl_odd.setVisibility(View.VISIBLE);
             viewHolder.rl_even.setVisibility(View.INVISIBLE);
+            viewHolder.tv.setBackgroundResource(R.drawable.chatfrom_bg_focused);
+            viewHolder.lp.setMargins(UtilDensity.dip2px(context,70),0,0,0);
+            viewHolder.lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+            viewHolder.tv.setLayoutParams(viewHolder.lp);
         } else {
             //position is even
+            //message sent
             viewHolder.rl_odd.setVisibility(View.INVISIBLE);
             viewHolder.rl_even.setVisibility(View.VISIBLE);
+            viewHolder.tv.setBackgroundResource(R.drawable.chatto_bg_focused);
+            viewHolder.lp.setMargins(0,0,UtilDensity.dip2px(context,70),0);
+            viewHolder.lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            viewHolder.tv.setLayoutParams(viewHolder.lp);
         }
         return convertView;
     }
@@ -70,6 +84,8 @@ public class AdvanceListViewAdapter extends BaseAdapter {
     private class ViewHolder {
         RelativeLayout rl_odd;
         RelativeLayout rl_even;
+        TextView tv;
+        RelativeLayout.LayoutParams lp;
 
         ViewHolder() {
             rl_odd = null;
