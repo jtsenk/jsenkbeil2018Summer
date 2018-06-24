@@ -5,11 +5,72 @@
     android:layout_height="match_parent"
     tools:context=".fragment.WorkFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_work_fragment"
-        android:gravity="center" />
+        android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Title Area"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/quiz_1_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Quiz 1"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Quiz 2"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Quiz 3"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_round_corners"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:text="Submit" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="This is the bottom TextView"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:background="@android:color/holo_blue_light"
+                        android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+    </LinearLayout>
 </FrameLayout>

@@ -28,7 +28,6 @@ public class AdvanceListViewAdapter extends BaseAdapter {
     }
 
     @Override
-
     public int getCount() {
         return list.size();
     }
@@ -90,6 +89,8 @@ public class AdvanceListViewAdapter extends BaseAdapter {
         ViewHolder() {
             rl_odd = null;
             rl_even = null;
+            tv = null;
+            lp = null;
         }
     }
 
