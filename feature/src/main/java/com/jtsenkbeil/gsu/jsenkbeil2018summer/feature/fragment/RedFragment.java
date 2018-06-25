@@ -64,6 +64,36 @@ public class RedFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        UtilLog.d("RedFragment","onDetach");
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        UtilLog.d("RedFragment","onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        UtilLog.d("RedFragment","onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        UtilLog.d("RedFragment","onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        UtilLog.d("RedFragment","onStop");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        UtilLog.d("RedFragment","onDestroy");
+    }
 }

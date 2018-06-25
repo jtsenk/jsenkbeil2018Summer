@@ -8,11 +8,11 @@ import android.widget.Toast;
 public class BaseActivity extends AppCompatActivity {
 
     public void shortToast (String s) {
-        Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
     }
 
     public void longToast (String s) {
-        Toast.makeText(this,s,Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_LONG).show();
     }
 
     public void goToActivity(Class c) {

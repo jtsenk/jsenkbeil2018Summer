@@ -65,6 +65,37 @@ public class GreenFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        UtilLog.d("GreenFragment","onDetach");
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        UtilLog.d("GreenFragment","onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        UtilLog.d("GreenFragment","onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        UtilLog.d("GreenFragment","onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        UtilLog.d("GreenFragment","onStop");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        UtilLog.d("GreenFragment","onDestroy");
+    }
+    
 }

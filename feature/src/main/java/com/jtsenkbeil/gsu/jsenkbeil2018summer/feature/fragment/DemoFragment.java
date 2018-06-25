@@ -13,14 +13,20 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ActivityA;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceListViewActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceViewPagerActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.CheckBoxActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.IntentAndBundleActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NinePatchActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NotificationActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.RadioGroupActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ResultActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ScaleTypeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.audio.BaseBean;
 
 import java.util.ArrayList;
 
@@ -56,11 +62,11 @@ public class DemoFragment extends Fragment {
         contentList.add("Intent & Bundle");
         contentList.add("Notification");
         contentList.add("AdvancedListView");
-        contentList.add("Theta");
-        contentList.add("Iota");
-        contentList.add("Kappa");
-        contentList.add("Lambda");
-        contentList.add("Mu");
+        contentList.add("AdvancedViewPager");
+        contentList.add("ActivityCommunications");
+        contentList.add("ResultActivity");
+        contentList.add("RadioGroupActivity");
+        contentList.add("CheckBoxActivity");
         contentList.add("Nu");
         contentList.add("Xi");
         contentList.add("Omicron");
@@ -146,6 +152,38 @@ public class DemoFragment extends Fragment {
                     case 6:
                         //go to Advanced List View
                         intent = new Intent(getActivity(), AdvanceListViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        //go to AdvancedViewPager
+                        intent = new Intent(getActivity(), AdvanceViewPagerActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 8:
+                        //go to Communication Activity
+                        intent = new Intent(getActivity(), ActivityA.class);
+                        Bundle bundle2 = new Bundle();
+                        bundle2.putString("StringBundle","FromDemoFragment");
+                        bundle2.putInt("IntegerBundle",101);
+                        BaseBean bean = new BaseBean();
+                        bean.setName("Bean");
+                        bundle2.putSerializable("Object",bean);
+                        intent.putExtra("Bundle",bundle2);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        //go to ResultActivity
+                        intent = new Intent(getActivity(), ResultActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 10:
+                        //go to RadioGroupActivity
+                        intent = new Intent(getActivity(), RadioGroupActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 11:
+                        //go to CheckBoxActivity
+                        intent = new Intent(getActivity(), CheckBoxActivity.class);
                         startActivity(intent);
                         break;
                     default:

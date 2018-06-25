@@ -61,11 +61,39 @@ public class BlueFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_blue, container, false);
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
+        UtilLog.d("BlueFragment","onDetach");
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        UtilLog.d("BlueFragment","onStart");
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        UtilLog.d("BlueFragment","onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        UtilLog.d("BlueFragment","onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        UtilLog.d("BlueFragment","onStop");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        UtilLog.d("BlueFragment","onDestroy");
+    }
 }
