@@ -17,12 +17,15 @@ import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ActivityA;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceListViewActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.CheckBoxActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.DialogActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.HandlerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.IntentAndBundleActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NinePatchActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.NotificationActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.RadioGroupActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ResultActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.RunnableHandlerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ScaleTypeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
@@ -67,9 +70,18 @@ public class DemoFragment extends Fragment {
         contentList.add("ResultActivity");
         contentList.add("RadioGroupActivity");
         contentList.add("CheckBoxActivity");
-        contentList.add("Nu");
-        contentList.add("Xi");
-        contentList.add("Omicron");
+        contentList.add("Dialogs");
+        contentList.add("Handler");
+        contentList.add("RunnableHandler");
+        contentList.add("Pi");
+        contentList.add("Rho");
+        contentList.add("Sigma");
+        contentList.add("Tau");
+        contentList.add("Upsilon");
+        contentList.add("Phi");
+        contentList.add("Chi");
+        contentList.add("Psi");
+        contentList.add("Omega");
     }
 
     /**
@@ -186,13 +198,27 @@ public class DemoFragment extends Fragment {
                         intent = new Intent(getActivity(), CheckBoxActivity.class);
                         startActivity(intent);
                         break;
+                    case 12:
+                        //go to DialogActivity
+                        intent = new Intent(getActivity(), DialogActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 13:
+                        //go to HandlerActivity
+                        intent = new Intent(getActivity(), HandlerActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 14:
+                        //go to RunnableHandlerActivity
+                        intent = new Intent(getActivity(), RunnableHandlerActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         Toast.makeText(getContext(), "You clicked an unconnected list item",Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
-
         return view;
     }
 

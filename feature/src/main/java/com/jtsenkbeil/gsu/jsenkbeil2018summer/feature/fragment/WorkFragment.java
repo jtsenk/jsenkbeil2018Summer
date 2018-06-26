@@ -1,6 +1,7 @@
 package com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.Quiz2Activity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +29,8 @@ public class WorkFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private Button q1;
-
+    private Button q2;
+    private Intent intent;
 
     public WorkFragment() {
         // Required empty public constructor
@@ -72,6 +76,15 @@ public class WorkFragment extends Fragment {
             }
         });
 
+        q2 = (Button) view.findViewById(R.id.quiz_2_btn);
+        q2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //start new activity
+                intent = new Intent(getActivity(), Quiz2Activity.class);
+                startActivity(intent);
+            }
+        });
         return  view;
     }
 
