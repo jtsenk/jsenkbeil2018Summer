@@ -16,6 +16,7 @@ import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ActivityA;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceListViewActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceViewPagerActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AnimationActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.CheckBoxActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.DialogActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.HandlerActivity;
@@ -73,7 +74,7 @@ public class DemoFragment extends Fragment {
         contentList.add("Dialogs");
         contentList.add("Handler");
         contentList.add("RunnableHandler");
-        contentList.add("Pi");
+        contentList.add("Animations");
         contentList.add("Rho");
         contentList.add("Sigma");
         contentList.add("Tau");
@@ -211,6 +212,11 @@ public class DemoFragment extends Fragment {
                     case 14:
                         //go to RunnableHandlerActivity
                         intent = new Intent(getActivity(), RunnableHandlerActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 15:
+                        //go to AnimationActivity
+                        intent = new Intent(getActivity(), AnimationActivity.class);
                         startActivity(intent);
                         break;
                     default:
