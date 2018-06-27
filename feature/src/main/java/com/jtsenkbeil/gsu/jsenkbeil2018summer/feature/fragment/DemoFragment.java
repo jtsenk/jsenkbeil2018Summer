@@ -17,8 +17,10 @@ import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ActivityA;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceListViewActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AdvanceViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AnimationActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.AnimatorActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.CheckBoxActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.DialogActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.GestureActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.HandlerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.IntentAndBundleActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
@@ -75,8 +77,8 @@ public class DemoFragment extends Fragment {
         contentList.add("Handler");
         contentList.add("RunnableHandler");
         contentList.add("Animations");
-        contentList.add("Rho");
-        contentList.add("Sigma");
+        contentList.add("Animator");
+        contentList.add("Gesture");
         contentList.add("Tau");
         contentList.add("Upsilon");
         contentList.add("Phi");
@@ -217,6 +219,16 @@ public class DemoFragment extends Fragment {
                     case 15:
                         //go to AnimationActivity
                         intent = new Intent(getActivity(), AnimationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 16:
+                        //go to AnimatorActivity
+                        intent = new Intent(getActivity(), AnimatorActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 17:
+                        //go to GestureActivity
+                        intent = new Intent(getActivity(), GestureActivity.class);
                         startActivity(intent);
                         break;
                     default:

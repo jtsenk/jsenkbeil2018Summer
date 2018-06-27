@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AnimatorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/activity_animator_start"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="start anim"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/activity_animator_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Hello World"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:background="@color/yellow"
+            android:textSize="12sp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/activity_animator_stop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="stop anim"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/animator_alpha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="alpha"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/animator_scale"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="scale"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/animator_rotate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="rotate"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/animator_trans"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="trans"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/animator_charf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="charf"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/animator_color"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="color"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

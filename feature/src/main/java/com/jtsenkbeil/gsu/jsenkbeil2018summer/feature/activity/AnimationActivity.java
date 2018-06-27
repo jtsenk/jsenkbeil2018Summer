@@ -8,9 +8,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.BaseActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
 
-public class AnimationActivity extends AppCompatActivity {
+public class AnimationActivity extends BaseActivity {
 
 
     private Button alphaB;
@@ -33,6 +34,10 @@ public class AnimationActivity extends AppCompatActivity {
         setB = findViewById(R.id.activity_animation_set);
         tv = findViewById(R.id.activity_animation_tv);
 
+        /*NOTE: Can pre-load animations by loading them and assigning them to separate vars.
+        *   Should probably use a separate method for this.
+        *   Uses more memory, but saves on button-press animation delay.
+        */
         alphaB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +78,12 @@ public class AnimationActivity extends AppCompatActivity {
             }
         });
 
-
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shortToast("AnimationTextView");
+            }
+        });
 
     }
 }

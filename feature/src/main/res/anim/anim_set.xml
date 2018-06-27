@@ -7,23 +7,19 @@
         android:fromAlpha="0.0"
         android:toAlpha="1.0" />
 
-    <scale xmlns:android="http://schemas.android.com/apk/res/android"
+    <scale
         android:fromXScale="2.0"
         android:toXScale="1.0"
         android:fromYScale="3.0"
         android:toYScale="1.0"
         android:pivotX="50%"
-        android:pivotY="75%"
-        android:fillBefore="true"
-        android:repeatCount="2"
-        android:repeatMode="reverse" />
+        android:pivotY="50%" />
 
     <rotate xmlns:android="http://schemas.android.com/apk/res/android"
         android:fromDegrees="0"
         android:toDegrees="720"
-        android:pivotY="45%"
-        android:pivotX="55%"
-        android:fillBefore="true">
+        android:pivotY="50%"
+        android:pivotX="50%">
     </rotate>
 
 </set>
