@@ -8,7 +8,7 @@
     tools:context=".activity.AdvanceViewPagerActivity">
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/activit_advance_view_pager_tl"
+        android:id="@+id/activity_advance_view_pager_tl"
         android:layout_width="match_parent"
         android:layout_height="60dp">
     </android.support.design.widget.TabLayout>

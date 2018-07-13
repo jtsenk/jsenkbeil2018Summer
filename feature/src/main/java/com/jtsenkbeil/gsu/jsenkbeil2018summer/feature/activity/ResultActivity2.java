@@ -8,6 +8,8 @@ import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
 
 public class ResultActivity2 extends AppCompatActivity {
 
+    final static int ID = 1414;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -85,8 +85,16 @@ public class DialogActivity extends BaseActivity {
                         //shortToast("You chose #8");
                         CustomDialog cd1 = new CustomDialog( DialogActivity.this, new CustomDialog.ICustomDialogEventListener() {
                             @Override
-                            public void onOKClicked(String msg) {
-                                shortToast(msg);
+                            public void onYesClicked() {
+                                shortToast("Yes");
+                            }
+                            @Override
+                            public void onExitClicked() {
+                                shortToast("Exit");
+                            }
+                            @Override
+                            public void onNoClicked() {
+                                shortToast("No");
                             }
                         });
                         cd1.show();

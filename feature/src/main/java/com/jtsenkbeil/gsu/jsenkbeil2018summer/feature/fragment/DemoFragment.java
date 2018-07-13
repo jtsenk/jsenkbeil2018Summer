@@ -30,6 +30,7 @@ import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.RadioGroupActivit
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ResultActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.RunnableHandlerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ScaleTypeActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.UpdateAndResultActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.ViewPagerActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.adapter.ListNormalAdapter;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.audio.BaseBean;
@@ -79,7 +80,7 @@ public class DemoFragment extends Fragment {
         contentList.add("Animations");
         contentList.add("Animator");
         contentList.add("Gesture");
-        contentList.add("Tau");
+        contentList.add("UpdateAndResult");
         contentList.add("Upsilon");
         contentList.add("Phi");
         contentList.add("Chi");
@@ -229,6 +230,11 @@ public class DemoFragment extends Fragment {
                     case 17:
                         //go to GestureActivity
                         intent = new Intent(getActivity(), GestureActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 18:
+                        //go to UpdateAndResultActivity
+                        intent = new Intent(getActivity(), UpdateAndResultActivity.class);
                         startActivity(intent);
                         break;
                     default:

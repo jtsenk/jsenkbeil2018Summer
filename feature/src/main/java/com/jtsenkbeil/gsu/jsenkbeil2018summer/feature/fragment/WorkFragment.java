@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.Q4Activity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.Quiz2Activity;
 
 /**
@@ -30,6 +31,7 @@ public class WorkFragment extends Fragment {
     private String mParam2;
     private Button q1;
     private Button q2;
+    private Button q4;
     private Intent intent;
 
     public WorkFragment() {
@@ -85,7 +87,27 @@ public class WorkFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        q4 = (Button) view.findViewById(R.id.quiz_4_btn);
+        q4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //start new activity
+                intent = new Intent(getActivity(), Q4Activity.class);
+                startActivityForResult(intent, 200);
+            }
+        });
+
         return  view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        String s = data.getStringExtra("Data");
+        if (s.equals("Exit")) {
+            Toast.makeText(getContext(), s, Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

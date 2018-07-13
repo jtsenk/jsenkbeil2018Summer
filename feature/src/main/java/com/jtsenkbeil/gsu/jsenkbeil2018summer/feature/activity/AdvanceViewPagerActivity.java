@@ -28,7 +28,7 @@ public class AdvanceViewPagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advance_view_pager);
-        tl = findViewById(R.id.activit_advance_view_pager_tl);
+        tl = findViewById(R.id.activity_advance_view_pager_tl);
         vp = findViewById(R.id.activity_advance_view_pager);
 
         list.add(new Pair<String, Fragment>("Red", new RedFragment() ) );
