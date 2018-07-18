@@ -50,6 +50,14 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/quiz_5_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="Quiz 5" />
+
+
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/btn_round_corners"

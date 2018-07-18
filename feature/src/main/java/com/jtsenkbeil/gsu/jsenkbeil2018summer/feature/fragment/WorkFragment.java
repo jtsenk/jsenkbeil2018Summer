@@ -14,6 +14,7 @@ import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.R;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.LaunchModeActivity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.Q4Activity;
 import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.Quiz2Activity;
+import com.jtsenkbeil.gsu.jsenkbeil2018summer.feature.activity.Quiz5Activity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,6 +33,7 @@ public class WorkFragment extends Fragment {
     private Button q1;
     private Button q2;
     private Button q4;
+    private Button q5;
     private Intent intent;
 
     public WorkFragment() {
@@ -95,6 +97,16 @@ public class WorkFragment extends Fragment {
                 //start new activity
                 intent = new Intent(getActivity(), Q4Activity.class);
                 startActivityForResult(intent, 200);
+            }
+        });
+
+        q5 = view.findViewById(R.id.quiz_5_btn);
+        q5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //start new activity
+                intent = new Intent(getActivity(), Quiz5Activity.class);
+                startActivity(intent);
             }
         });
 
